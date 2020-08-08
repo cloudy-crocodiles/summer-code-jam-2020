@@ -1,11 +1,17 @@
 type Folder {
-    id: ID!
-    site: Site!
-    path: String!
+  id: ID!
+  site: Site!
+  path: String!
 }
 
 type Item {
-    id: ID!
-    folder: Folder!
-    filename: String!
+  id: ID!
+  folder: Folder!
+  filename: String!
+}
+
+input FolderInput {
+  site: ID!
+  parent: ID
+  path: String!
 }
